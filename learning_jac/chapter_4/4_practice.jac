@@ -1,5 +1,6 @@
 #*
-Implement a simple function, get_action_score(feedback_list: list[dict], action_name: str), that iterates through the provided feedback_list. 
+Implement a simple function, get_action_score(feedback_list: list[dict], action_name: str), 
+that iterates through the provided feedback_list. 
 If the dictionary with the matching 'action' key is found, return its 'score'. 
 If the action is not found after checking the whole list, return a default score of -5.
 *#
