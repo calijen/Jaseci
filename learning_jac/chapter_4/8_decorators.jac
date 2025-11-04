@@ -46,32 +46,3 @@ def add_milk(func: callable) -> callable{
         print("Here's your plain coffe.");
     }
 
-#*
-simulate a superintelligent AI preparing to make a critical decision, 
-but with control layers—each decorator adding one piece of safety, alignment, or performance enhancement.
-*#
-
-#You add a control decorator so that the AI doesn't just do what it wants
-
-def capability_control( approved: bool = False) -> callable{
-    def decorator(func:callable) -> callable{
-        def wrapper(*args:any, **kwargs:any) -> callable{
-            if not approved {
-                print("System check failed. Capability not yet approved.");
-                return None;
-            } else {
-                print("Capabilities verified. Proceeding.");
-                return func(*args, **kwargs);
-            }
-            return wrapper;
-        }
-        return decorator;
-    }
-}
-@capability_control(approved = True)
-def make_decision() -> str{ #this is the original function..
-    print("Evaluating universe... making optimal choice.");
-}
-with entry{
-  make_decision();
-}
