@@ -36,3 +36,4 @@ with entry{
     mood = captioner.analyze_mood(image);
     print(f"Mood: {mood}");
 }
+
