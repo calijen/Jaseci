@@ -30,13 +30,31 @@ obj company{
             return False;
         }
     }
+
+    def get_net_income() ->int{
+        profit:int = self.revenue - self.expenses;
+        return profit;
+    }
+    
  
 }
 
+def is_efficient(company_obj:obj) ->bool{
+    if company_obj.revenue > company_obj.employees*100{
+        return True;
+    }else{
+        return False;
+    }
+}
 with entry{
-    Calijen=company("Calijen", "Tech",10, 500_000, 300_000);
+    Calijen=company("Calijen", "Tech",10_000, 500_000, 300_000);
     print(Calijen.is_profitable());
 
     Calijen.update_expenses(-600_000);
     print(Calijen.is_profitable());
+
+    print(Calijen.get_net_income());
+    print(is_efficient(Calijen));
+
 }
+
