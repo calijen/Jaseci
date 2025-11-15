@@ -38,13 +38,24 @@ obj company{
     
  
 }
-
+#check if the company is efficient
 def is_efficient(company_obj:obj) ->bool{
     if company_obj.revenue > company_obj.employees*100{
         return True;
     }else{
         return False;
     }
+}
+
+#update multiple financial attributes at once
+#check if the company is profitable
+#we will need to use the existing methods to update it
+
+def apply_quarterly_adjustments(company_obj, revenue_change, expense_change)->bool{
+    new_expenses 
+
+    return company_obj.is_profitable();
+
 }
 with entry{
     Calijen=company("Calijen", "Tech",10_000, 500_000, 300_000);
